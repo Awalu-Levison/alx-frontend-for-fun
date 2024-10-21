@@ -38,7 +38,7 @@ def convert_markdown_to_html(a, b):
                 my_html.append(line.rstrip())
 
     # Write the HTML output to a file
-    with open(my_output, "w", encoding="utf-8") as f:
+    with open(b, "w", encoding="utf-8") as f:
         f.write("\n".join(my_html))
 
 
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Convert the Markdown file to HTML and write the output to a file
-    convert_markdown_to_html(my_input, my_output)
+    convert_markdown_to_html(a, b)
 
     # Exit with a successful status code
     sys.exit(0)
