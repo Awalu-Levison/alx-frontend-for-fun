@@ -14,8 +14,8 @@ def convert_markdown_to_html(my_input, my_output):
     """
 
     # Get the input and output file names from the command-line arguments
-    input_file = sys.argv[1]
-    output_file = sys.argv[2]
+    my_input = sys.argv[1]
+    my_output = sys.argv[2]
 
     if not (os.path.exists(my_input) and os.path.isfile(my_input)):
         print(f"Missing {input_file}", file=sys.stderr)
