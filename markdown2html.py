@@ -42,9 +42,7 @@ def convert_markdown_to_html(input1, output1):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print(
-            f"Error: Expected 2 arguments, but got {len(sys.argv) - 1}.",
-            file=sys.stderr)
+        print(f"Error: Expected 2 arguments, but got {len(sys.argv) - 1}.", file=sys.stderr)
         print("Usage: ./markdown2html.py <input1> <output1>", file=sys.stderr)
         sys.exit(1)
 
