@@ -13,11 +13,11 @@ def convert_markdown_to_html(input1, output1):
     Converts a Markdown file to HTML and writes the output to a file.
     """
     if not (os.path.exists(input1) and os.path.isfile(input1)):
-        print(f"Missing {input_file}", file=sys.stderr)
+        print(f"Missing {input1}", file=sys.stderr)
         sys.exit(1)
 
     try:
-        with open(input_file, encoding="utf-8") as f:
+        with open(input1, encoding="utf-8") as f:
             html_output = []
             for line in f:
                 match = re.match(r"^(#+) (.*)$", line)
@@ -36,7 +36,7 @@ def convert_markdown_to_html(input1, output1):
         with open(output1, "w", encoding="utf-8") as f:
             f.write("\n".join(html_output))
     except Exception as e:
-        print(f"Error writing to {output2}: {e}", file=sys.stderr)
+        print(f"Error writing to {output1}: {e}", file=sys.stderr)
         sys.exit(1)
 
 
