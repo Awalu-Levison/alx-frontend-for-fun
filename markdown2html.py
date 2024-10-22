@@ -5,7 +5,7 @@ A script that converts Markdown to HTML.
 
 import sys
 import os
-import re
+imort re
 
 def convert_markdown_to_html(input_file, output_file):
     """
@@ -32,6 +32,7 @@ def convert_markdown_to_html(input_file, output_file):
     # Write the HTML output to a file
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(html_lines))
+
 
 if __name__ == "__main__":
     # Check that the correct number of arguments were provided
