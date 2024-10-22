@@ -24,8 +24,7 @@ def convert_markdown_to_html(input1, output1):
                 if match:
                     heading_level = len(match.group(1))
                     heading_text = match.group(2)
-                    html_output.append(
-                        f"<h{heading_level}>{heading_text}</h{heading_level}>")
+                    html_output.append(f"<h{heading_level}>{heading_text}</h{heading_level}>")
                 else:
                     html_output.append(line.rstrip())
     except Exception as e:
@@ -42,7 +41,6 @@ def convert_markdown_to_html(input1, output1):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print(f"Error: Expected 2 arguments, but got {len(sys.argv) - 1}.", file=sys.stderr)
         print("Usage: ./markdown2html.py <input1> <output1>", file=sys.stderr)
         sys.exit(1)
 
