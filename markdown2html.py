@@ -20,7 +20,7 @@ def convert_markdown_to_html(a, b):
     b = sys.argv[2]
 
     if not (os.path.exists(a) and os.path.isfile(a)):
-        print(f"Missing {input_file}", file=sys.stderr)
+        print(f"Missing {a}", file=sys.stderr)
         sys.exit(1)
 
     # Read the Markdown file and convert it to HTML
