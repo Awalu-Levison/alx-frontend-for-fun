@@ -7,6 +7,7 @@ import sys
 import os
 import re
 
+
 def convert_markdown_to_html(input_file, output_file):
     """
     Converts a Markdown file to HTML and writes the output to a file.
@@ -22,16 +23,20 @@ def convert_markdown_to_html(input_file, output_file):
             if match:
                 heading_level = len(match.group(1))
                 heading_text = match.group(2)
-                html_lines.append(f"<h{heading_level}>{heading_text}</h{heading_level}>")
+                html_lines.append(
+                        f"<h{heading_level}>{heading_text}</h{heading_level}>")
             else:
                 html_lines.append(line.rstrip())
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(html_lines))
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: ./markdown2html.py <input_file> <output_file>", file=sys.stderr)
+        print(
+                "Usage: ./markdown2html.py <input_file> <output_file>",
+                file=sys.stderr)
         sys.exit(1)
 
     input_file = sys.argv[1]
