@@ -43,11 +43,8 @@ def convert_markdown_to_html(a, b):
 
 
 if __name__ == "__main__":
-    # Check that the correct number of arguments were provided
     if len(sys.argv) != 3:
-        print(
-                "Usage: ./markdown2html.py <input_file> <output_file>",
-                file=sys.stderr)
+        print("Usage: ./markdown2html.py <a> <b>", file=sys.stderr)
         sys.exit(1)
 
     # Convert the Markdown file to HTML and write the output to a file
